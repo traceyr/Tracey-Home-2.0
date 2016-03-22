@@ -15,3 +15,14 @@
 //= require_tree .
 
 //alert("Page is not available at this time.")
+
+function alertUser() {
+  alert("Page is not available at this time. Please check back later.");
+}
+
+window.onload=function(){
+  var notready = document.getElementsByClassName('incomplete');
+  for (var i = 0; i < notready.length; i++) {
+    notready[i].addEventListener('click', alertUser, false);
+  }
+};
