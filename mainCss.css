@@ -1,0 +1,56 @@
+body {
+  background-color: #DBDDD4;
+  color: #0D0630;
+  font-family: "Trebuchet MS", "Liberation Mono", Helvetica;
+}
+
+#page {
+
+  padding: 10px 30px 10px 30px;
+  margin: 10px auto 10px auto;
+  border: 4px double #000;
+}
+
+h1 {
+  font-weight: bolder;
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+h3 {
+  margin-top: 0px;
+  padding-left: 70px;
+  color: #384E77;
+}
+
+ul {
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  color: #0D0630;
+  border-top: 2px solid #8BBEB2;
+  border-bottom: 1px solid #8BBEB2;
+}
+
+ul a {
+  text-decoration: none;
+  color: #293544;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-right: 30px;
+  margin-left: 30px;
+
+}
+
+li {
+  display: inline;
+  margin: 0px 3px;
+  text-decoration: none;
+  color: #293544;
+}
+
+ul a:hover {
+  font-weight: bolder;
+  color: black;
+  font-size: 150%;
+}
