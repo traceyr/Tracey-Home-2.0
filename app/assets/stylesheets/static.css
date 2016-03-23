@@ -23,6 +23,10 @@ h3 {
   color: #384E77;
 }
 
+h2 {
+  color: #384E77;
+}
+
 ul {
   text-align: center;
   text-decoration: none;
@@ -56,7 +60,7 @@ ul a:hover {
 }
 
 .images img {
- width: 18%;
+ width: 20%;
  height: 20%;
  padding-right: 0;
  padding-left: 0;
