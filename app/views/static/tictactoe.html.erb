@@ -1,0 +1,82 @@
+<html>
+
+  <head>
+    <style type="text/css">
+      .grid {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        font-size: 40pt;
+        font-weight: bold;
+      }
+    </style>
+
+    <script>
+
+       window.onload = function() {
+      function startGame() {
+        var player1 = prompt("Hello player 1. Please enter your name.")
+
+        if (player1 != null) {
+            alert("Hello " + player1 + "! Welcome to the game. You will be X.");
+          }
+
+
+         var player2 = prompt("Hello player 2. Please enter your name. ")
+
+         if (player2 != null) {
+            alert("Hello " + player2 + "! Welcome to the game. You will be O.");
+          }
+
+          document.turn = "x";
+
+          setMessage(document.turn + ' plays first!')
+
+      }
+
+      function setMessage(msg) {
+        document.getElementById('message').innerHTML = msg;
+      }
+
+        var beginGame = document.getElementById('start');
+        if(beginGame) {
+          beginGame.addEventListener('click', startGame, false);
+          console.log(beginGame);
+        }
+      }
+    </script>
+
+    </script>
+
+
+  </head>
+
+  <body>
+
+    <h1>Welcome to Tic Tac Toe</h1>
+
+    <div id="message">Messages will GO here</div>
+
+      <table border="1">
+        <tr>
+          <td id="a1"></td>
+          <td class="grid"></td>
+          <td class="grid"></td>
+        </tr>
+         <tr>
+          <td class="grid"></td>
+          <td class="grid"></td>
+          <td class="grid"></td>
+        </tr>
+         <tr>
+          <td class="grid"></td>
+          <td class="grid"></td>
+          <td class="grid"></td>
+        </tr>
+      </table>
+
+      <button type="button" id="start">Start Game</button>
+
+  </body>
+
+</html>
