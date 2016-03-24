@@ -40,32 +40,31 @@
   }
 
   function checkAnswer(question, answer) {
-    var numCorrect = 0;
     if (answer === question.correctAnswer) {
-      return true;
-      alert("You are correct!");
-      numCorrect ++;
+        alert("Correct");
+        return true;
     } else {
-      return false;
-      alert("That is not the correct answer");
-    }
+        alert("false");
+        return false;
+      }
+
   }
 
-  function practice() {
-    alert("Yah it worked!");
-  }
+
 
   window.onload = function() {
-     var currentQuestion = 0;
-     printQuestion(questions[currentQuestion]);
-     var checkingAnswer = document.getElementsByClassName('answer');
-     if(checkingAnswer.addEventListener) {
-      checkingAnswer.addEventListener('click', practice, false);
+    var currentQuestion = 0;
+    printQuestion(questions[currentQuestion]);
+    var checkingAnswer = document.getElementsByClassName('answer');
+    for(var i = 0; i < checkingAnswer.length; i++) {
+      if(checkingAnswer[i].addEventListener) {
+        checkingAnswer[i].addEventListener('click', function(){checkAnswer(questions[currentQuestion], checkingAnswer[i])}, false);
+      }
     }
 
 
 
-  }
+  };
   </script>
 
 
