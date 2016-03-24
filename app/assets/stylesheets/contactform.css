@@ -1,4 +1,4 @@
-form {
+#form form {
   margin: 0 auto;
   width: 400px;
   padding: 1em;
@@ -7,7 +7,7 @@ form {
 
 }
 
-form div + div {
+#form form div + div {
   margin-top: 1em;
 }
 

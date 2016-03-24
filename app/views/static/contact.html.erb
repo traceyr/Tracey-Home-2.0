@@ -7,12 +7,12 @@
     <h1>Tracey Radcliffe</h1>
     <h3>Aspiring Web Developer</h3>
     <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="" class="incomplete" >Resume</a></li>
-        <li><a href="/code">Code Example</a></li>
-        <li><a href="/contact" class="current">Contact Me</a></li>
+      <ul class="pagetop">
+        <li class="heading"><a href="/">Home</a></li>
+        <li class="heading"><a href="/about">About</a></li>
+        <li class="heading"><a href="" class="incomplete" >Resume</a></li>
+        <li class="heading"><a href="/code">Code Example</a></li>
+        <li class="heading"><a href="/contact" class="current">Contact Me</a></li>
       </ul>
     </nav>
   </header>
@@ -20,10 +20,11 @@
 
 <div>
   <h2>Contact Me</h2>
-  <p> Use the form below to send me a message </p>
+  <p>Use the form below to send me a message </p>
+  <p>Please note, this form is not quite ready to use. Everything but the submit button is functioning properly.</p>
 </div>
 
-<form action="MAILTO:radcliffe.tracey@gmail.com" method="post">
+<form action="MAILTO:radcliffe.tracey@gmail.com" method="post" id="form">
   <div>
     <label for="name">Your Name:</label>
     <input type="text" id="name" />

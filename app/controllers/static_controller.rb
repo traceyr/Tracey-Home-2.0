@@ -13,4 +13,7 @@ class StaticController < ApplicationController
 
   def contact
   end
+
+  def trivia
+  end
 end

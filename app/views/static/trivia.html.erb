@@ -1,0 +1,86 @@
+<html>
+
+<head>
+  <style type="text/css">
+  </style>
+
+  <script>
+  function Question(question, answer1, answer2, answer3, answer4, correctAnswer) {
+    this.question = question;
+    this.answer1 = answer1;
+    this.answer2 = answer2;
+    this.answer3 = answer3;
+    this.answer4 = answer4;
+    this.correctAnswer = correctAnswer;
+    console.log("created");
+  }
+
+  var questions = [];
+
+  var questionOne = new Question("What is the name of my cat?", "Cat", "Minerva", "Dog", "Asshole", "Minerva");
+
+
+
+  var questionTwo = new Question("what type of dog is sherwood supposed to be?", "corgi", "pitbull", "loveable mutt", "australian sheppard", "corgi");
+
+  questions.push(questionOne, questionTwo);
+
+  function printQuestion(question) {
+    var title = document.getElementById('question-title');
+    var answer1 = document.getElementById('answer-1');
+    var answer2 = document.getElementById('answer-2');
+    var answer3 = document.getElementById('answer-3');
+    var answer4 = document.getElementById('answer-4');
+
+    title.innerHTML = question.question;
+    answer1.innerHTML = question.answer1;
+    answer2.innerHTML = question.answer2;
+    answer3.innerHTML = question.answer3;
+    answer4.innerHTML = question.answer4;
+  }
+
+  function checkAnswer(question, answer) {
+    var numCorrect = 0;
+    if (answer === question.correctAnswer) {
+      return true;
+      alert("You are correct!");
+      numCorrect ++;
+    } else {
+      return false;
+      alert("That is not the correct answer");
+    }
+  }
+
+  function practice() {
+    alert("Yah it worked!");
+  }
+
+  window.onload = function() {
+     var currentQuestion = 0;
+     printQuestion(questions[currentQuestion]);
+     var checkingAnswer = document.getElementsByClassName('answer');
+     if(checkingAnswer.addEventListener) {
+      checkingAnswer.addEventListener('click', practice, false);
+    }
+
+
+
+  }
+  </script>
+
+
+</head>
+
+<body>
+
+  <h1>Welcome to Trivia</h1>
+  <h2 id="question-title">Question 1</h2>
+  <p id="answer-1" class="answer">Answer 1</p>
+  <p id="answer-2" class="answer">Answer 2</p>
+  <p id="answer-3" class="answer">Answer 3</p>
+  <p id="answer-4" class="answer">Answer 4</p>
+
+
+
+
+</html>
