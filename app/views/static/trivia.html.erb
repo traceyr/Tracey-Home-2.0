@@ -14,7 +14,7 @@
     this.correctAnswer = correctAnswer;
     console.log("created");
   }
-
+  var numquestions = 4;
   var questions = [];
 
   var questionOne = new Question("What is the name of my cat?", "Cat", "Minerva", "Dog", "Asshole", "Minerva");
@@ -39,6 +39,7 @@
     answer4.innerHTML = question.answer4;
   }
 
+
   function checkAnswer(question, answer) {
     if (answer === question.correctAnswer) {
         alert("Correct");
@@ -58,13 +59,23 @@
     var checkingAnswer = document.getElementsByClassName('answer');
     for(var i = 0; i < checkingAnswer.length; i++) {
       if(checkingAnswer[i].addEventListener) {
-        checkingAnswer[i].addEventListener('click', function(){checkAnswer(questions[currentQuestion], checkingAnswer[i])}, false);
+        checkingAnswer[i].addEventListener('click', function(){checkAnswer(questions[currentQuestion], this.innerHTML)}, false);
       }
+
+        console.log(document.getElementById('answer-' + (i+1)).innerHTML);
     }
 
+    var nextQ = document.getElementById('quizbtn');
+    nextQ.addEventListener('click', function() {
+      if (currentQuestion + 1 < numquestions) {
+        currentQuestion++;
+        // console.log(currentQuestion);
+      } else if (currentQuestion + 1 === numquestions) {
+          alert("You have reached the end of the quiz. Thanks for playing");
+      }
+    }, true);
 
-
-  };
+      };
   </script>
 
 
@@ -78,6 +89,7 @@
   <p id="answer-2" class="answer">Answer 2</p>
   <p id="answer-3" class="answer">Answer 3</p>
   <p id="answer-4" class="answer">Answer 4</p>
+  <button type="button" id="quizbtn">Next</button>
 
 
 
