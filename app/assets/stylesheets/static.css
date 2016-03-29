@@ -27,7 +27,7 @@ h2 {
   color: #384E77;
 }
 
-.pagetop ul {
+ ul {
   text-align: center;
   text-decoration: none;
   padding: 15px;
@@ -36,7 +36,7 @@ h2 {
   border-bottom: 1px solid #8BBEB2;
 }
 
-.pagetop ul a {
+ ul a {
   text-decoration: none;
   color: #293544;
   font-size: 20px;
@@ -46,14 +46,14 @@ h2 {
 
 }
 
-.heading li {
+ li {
   display: inline;
   margin: 0px 3px;
   text-decoration: none;
   color: #293544;
 }
 
-.pagetop ul a:hover {
+ul a:hover {
   font-weight: bolder;
   color: black;
   font-size: 150%;
