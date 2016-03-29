@@ -101,3 +101,7 @@ ul a:hover {
   font-size: 16px;
 }
 
+#alert {
+  font-weight: bolder;
+  color: red;
+}
