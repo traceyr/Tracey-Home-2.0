@@ -86,7 +86,7 @@ ul a:hover {
 
 
 .answer {
-text-indent: 50px;
+  text-indent: 25px;
 }
 
 #quizbtn {
@@ -99,3 +99,4 @@ text-indent: 50px;
   display: inline-block;
   font-size: 16px;
 }
+
